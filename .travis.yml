@@ -1,7 +1,13 @@
 language: node_js
-sudo: false
 node_js:
+  - "14"
+  - "12"
   - "10"
   - "8"
   - "6"
   - "4"
+install:
+  - nvm install 12
+  - nvm use 12
+  - npm install
+  - nvm use $TRAVIS_NODE_VERSION
