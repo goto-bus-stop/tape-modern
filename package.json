@@ -1,7 +1,7 @@
 {
   "name": "@goto-bus-stop/tape-modern",
   "description": "Minimum viable TAP-compliant testing framework",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "author": "Rich Harris (https://github.com/Rich-Harris)",
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.3",
@@ -20,8 +20,7 @@
   "files": [
     "src",
     "index.cjs",
-    "index.cjs.map",
-    "types"
+    "index.cjs.map"
   ],
   "license": "LIL",
   "main": "./index.cjs",
@@ -32,6 +31,5 @@
     "prepublishOnly": "npm test && npm run build",
     "test": "standard && echo \"TODO\""
   },
-  "type": "module",
-  "types": "types/index.d.ts"
+  "type": "module"
 }
