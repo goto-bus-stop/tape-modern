@@ -2,28 +2,36 @@
   "name": "@goto-bus-stop/tape-modern",
   "description": "Minimum viable TAP-compliant testing framework",
   "version": "2.0.1",
-  "repository": "goto-bus-stop/tape-modern",
   "author": "Rich Harris (https://github.com/Rich-Harris)",
-  "main": "dist/tape-modern.cjs.js",
-  "module": "dist/tape-modern.esm.js",
-  "types": "types/index.d.ts",
-  "files": [
-    "dist",
-    "types"
-  ],
   "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
     "glob": "^7.1.2",
     "mocha": "^4.0.1",
-    "rollup": "^0.62.0",
+    "rollup": "^2.27.1",
     "rollup-plugin-async": "^1.2.0",
-    "rollup-plugin-buble": "^0.19.2",
     "standard": "^11.0.1"
   },
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./index.cjs"
+    }
+  },
+  "files": [
+    "src",
+    "index.cjs",
+    "index.cjs.map",
+    "types"
+  ],
+  "license": "LIL",
+  "main": "./index.cjs",
+  "repository": "goto-bus-stop/tape-modern",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -cw",
-    "test": "standard && echo \"TODO\"",
-    "prepublishOnly": "npm test && npm run build"
+    "prepublishOnly": "npm test && npm run build",
+    "test": "standard && echo \"TODO\""
   },
-  "license": "LIL"
+  "type": "module",
+  "types": "types/index.d.ts"
 }

@@ -1,14 +1,16 @@
 import async from 'rollup-plugin-async'
-import buble from 'rollup-plugin-buble'
+import buble from '@rollup/plugin-buble'
 
 const pkg = require('./package.json')
 
 export default {
   input: './src/index.js',
-  output: [
-    { file: pkg.main, format: 'cjs', sourcemap: true, interop: false },
-    { file: pkg.module, format: 'es', sourcemap: true }
-  ],
+  output: {
+    file: pkg.main,
+    format: 'cjs',
+    sourcemap: true,
+    interop: false
+  },
   external: ['util'],
   plugins: [
     async(),
